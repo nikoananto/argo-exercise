@@ -1,0 +1,11 @@
+﻿apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: nginx-argo-route
+spec:
+  path: /
+  to:
+    kind: Service
+    name: nginx-argo-svc
+  port:
+    targetPort: 8080
